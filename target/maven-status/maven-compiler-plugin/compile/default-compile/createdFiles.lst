@@ -1,0 +1,7 @@
+com\ar\caiolaboot\model\Skill.class
+com\ar\caiolaboot\service\impl\Serviceimpl.class
+com\ar\caiolaboot\WebConf.class
+com\ar\caiolaboot\CaiolabootApplication.class
+com\ar\caiolaboot\repository\Skillrepointer.class
+com\ar\caiolaboot\service\SkillService.class
+com\ar\caiolaboot\controller\Controller.class
