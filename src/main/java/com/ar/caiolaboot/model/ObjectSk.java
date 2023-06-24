@@ -25,8 +25,6 @@ public class ObjectSk {
 	@Column(name = "url")
 	private String url;
 	
-	public ObjectSk() {
-		
-	}
-	
+	public ObjectSk() {	
+	}	
 }

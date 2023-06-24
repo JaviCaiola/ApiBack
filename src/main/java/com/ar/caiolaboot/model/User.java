@@ -25,8 +25,6 @@ public class User {
 	@Column(name = "pass")
 	private String contraseña;
 	
-	public User () {
-		
+	public User () {	
 	}
-	
 }
