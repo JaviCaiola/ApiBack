@@ -1,7 +1,7 @@
-C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\model\Skill.java
+C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\controller\ObjSkController.java
+C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\repository\ObjectSkRepo.java
 C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\CaiolabootApplication.java
-C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\service\SkillService.java
-C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\repository\Skillrepointer.java
-C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\service\impl\Serviceimpl.java
-C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\controller\Controller.java
+C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\model\ObjectSk.java
+C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\service\ObjectSkimpl.java
+C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\service\ObjectSkService.java
 C:\Users\javit\Documents\APIback\caiolaboot\src\main\java\com\ar\caiolaboot\WebConf.java
