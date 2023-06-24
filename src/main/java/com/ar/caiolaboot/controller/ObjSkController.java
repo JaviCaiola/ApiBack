@@ -39,7 +39,7 @@ public class ObjSkController {
 		return service.crear(sk);
 	}
 	
-	@PutMapping("updater/{id}")
+	@PutMapping("update/{id}")
 	public ObjectSk update (@RequestBody ObjectSk sk) {
 		return service.update(sk);
 	}
