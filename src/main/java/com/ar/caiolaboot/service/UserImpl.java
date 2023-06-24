@@ -1,5 +1,42 @@
 package com.ar.caiolaboot.service;
 
-public class UserImpl {
+import java.util.List;
+
+import com.ar.caiolaboot.model.User;
+import com.ar.caiolaboot.repository.UserRepo;
+
+public class UserImpl implements UserService{
+
+	private final UserRepo repo;
+	
+	public UserImpl(UserRepo repo) {
+		this.repo = repo;
+	}
+	
+	
+	@Override
+	public List<User> allUsers() {
+		return repo.findAll();
+	}
+
+	@Override
+	public User buscarUser(Long id) {
+		return repo.findById(id).orElse(null);
+	}
+
+	@Override
+	public User crearUser(User us) {
+		return repo.save(us);
+	}
+
+	@Override
+	public void borrarUser(Long id) {
+		repo.deleteById(id);
+	}
+
+	@Override
+	public User updateUser(User us) {
+		return repo.save(us);
+	}
 
 }
