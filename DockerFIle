@@ -1,4 +1,4 @@
-FROM amazoncoretto:17
+FROM amazonlinux:2023
 MAINTAINER javicaiola
 COPY target/caiolaboot-0.0.1-SNAPSHOT.jar caiolaboot-0.0.1-SNAPSHOT.jar.original
 ENTRYPOINT ["java","-jar","/caiolaboot-0.0.1-SNAPSHOT.jar"]

@@ -15,7 +15,7 @@ import com.ar.caiolaboot.model.ObjectSk;
 import com.ar.caiolaboot.service.ObjectSkService;
 
 @RestController
-@RequestMapping("/api/sk")
+@RequestMapping("/api")
 public class ObjSkController {
 
 	private final ObjectSkService service;
@@ -29,7 +29,7 @@ public class ObjSkController {
 		return service.obtenerAll();
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("buscar/{id}")
 	public ObjectSk search(@PathVariable Long id) {
 		return service.buscarId(id);
 	}
@@ -39,12 +39,12 @@ public class ObjSkController {
 		return service.crear(sk);
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("updater/{id}")
 	public ObjectSk update (@RequestBody ObjectSk sk) {
 		return service.update(sk);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("borrar/{id}")
 	public void delete(@PathVariable Long id){
 		service.delete(id);
 	}
