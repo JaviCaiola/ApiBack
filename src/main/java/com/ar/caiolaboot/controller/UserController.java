@@ -2,6 +2,7 @@ package com.ar.caiolaboot.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,8 +41,13 @@ public class UserController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public User actualizar (@PathVariable Long id ,@RequestBody User us) {
-		return uservice.updateUser(us);
+	public ResponseEntity<User> actualizar (@PathVariable Long id ,@RequestBody User us) {
+		User user = uservice.updateUser(id, us);
+		if (user != null) {
+			return ResponseEntity.ok(user);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@DeleteMapping("/borrar/{id}")
