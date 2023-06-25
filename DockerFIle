@@ -1,5 +1,5 @@
-FROM amazonlinux:2023
+FROM openjdk:17-jdk-slim-buster
 MAINTAINER javicaiola
-COPY target/caiolaboot-0.0.1-SNAPSHOT.jar caiolaboot-0.0.1-SNAPSHOT.jar.original
+COPY target/caiolaboot-0.0.1-SNAPSHOT.jar caiolaboot-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","/caiolaboot-0.0.1-SNAPSHOT.jar"]
 
