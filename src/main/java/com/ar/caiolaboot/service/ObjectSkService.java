@@ -10,5 +10,5 @@ public interface ObjectSkService {
 	public ObjectSk buscarId(Long id);
 	public ObjectSk crear(ObjectSk obj);
 	public void delete(Long id);
-	public ObjectSk update(ObjectSk obj);
+	public ObjectSk update(Long id, ObjectSk obj);
 }

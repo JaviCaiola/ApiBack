@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.ar.caiolaboot.model.ObjectSk;
+import com.ar.caiolaboot.model.User;
 import com.ar.caiolaboot.repository.ObjectSkRepo;
 
 @Service
@@ -37,8 +38,15 @@ public class ObjectSkimpl implements ObjectSkService {
 	}
 
 	@Override
-	public ObjectSk update(ObjectSk obj) {
-		return repo.save(obj);
+	public ObjectSk update(Long id, ObjectSk obj) {
+		ObjectSk sk = repo.findById(id).orElse(null);
+		if(sk != null) {
+			sk.setName(obj.name);
+			sk.setUrl(obj.url);
+			return repo.save(sk);
+		} else {
+			return null;
+		}
 	}
 	
 }
