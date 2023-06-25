@@ -2,6 +2,7 @@ package com.ar.caiolaboot.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,8 +41,13 @@ public class ObjSkController {
 	}
 	
 	@PutMapping("update/{id}")
-	public ObjectSk update (@RequestBody ObjectSk sk) {
-		return service.update(sk);
+	public ResponseEntity<ObjectSk> update (@PathVariable Long id ,@RequestBody ObjectSk sk) {
+		ObjectSk skill = service.update(id, sk);
+		if(skill != null) {
+			return ResponseEntity.ok(skill);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@DeleteMapping("borrar/{id}")
